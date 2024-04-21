@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
+
+* {
+    font-family: "Montserrat";
+    color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+html {
+    overflow-x: hidden;
+}
+html::-webkit-scrollbar{
+    width: 0.8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: black;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #7b4bb7 ;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: rgba(0, 0, 0, 0.7);
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo {
+    font-size: 2rem;
+    color: #7b4bb7 ;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+logo:hover {
+    transform: scale(1.1);
+}
+
+.navegacao a {
+    font-size: 1.3rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.navegacao a:hover,
+.navegacao a.ativo{
+color: #7b4bb7 ;
+border-bottom: 3px solid #7b4bb7;
+}
+
+#icone-menu {
+    font-size: 3.6rem;
+    color: #7b4bb7;
+    display: none;
+}
+@media (max-width:995px){
+    #icone-menu {
+        display: block;
+    }
+    .navegacao {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #7b4bb7;
+        border-bottom: 3px solid #7b4bb7;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem 3%;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+        display: none;
+    }
+    .navegacao.ativo {
+        display: block;
+    }
+    .navegacao a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    .navegacao a:hover,
+    .navegacao a.ativo {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #7b4bb7;
+    }
+}
+
+section {
+min-height: 100vh;
+padding: 5rem 9% 5rem;
+}
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7rem;
+    background: black;
+}
+.home .home-conteudo h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+span {
+    color: #7b4bb7;
+}
+.home-conteudo h3 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+.home-img {
+    border-radius: 50%;
+}
+.home-img img {
+    position: relative;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px #7b4bb7;
+    cursor: pointer;
+}
+.home-img img:hover {
+    transform: scale(1.01);
+    filter: drop-shadow(0 0 25px #7b4bb7);
+}
+.home-conteudo p{
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-align: left;
+}
+.redes-icone a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: 0.2rem solid #7b4bb7;
+    font-size: 2rem;
+    border-radius: 50%;
+    color: #7b4bb7;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+}
+.redes-icone a:hover {
+    color: black;
+    transform: scale(1.3)translate(-5px);
+    background: #7b4bb7;
+    box-shadow: 0 0 25px #7b4bb7;
+}
+.botao {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #7b4bb7;
+    border: 2px solid #7b4bb7;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.botao:hover {
+    transform: scale(1.03);
+    background-color: #7b4bb7;
+    color: black;
+    box-shadow: 0 0 25px #7b4bb7;
+}
+.texto-escrito {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+.texto-escrito span::before {
+    content: 'Ciêntista da Computação';
+    color: #7b4bb7;
+    animation: words 20s infinite;
+}
+@media (max-width:1000px) {
+    .home {
+        gap: 4rem;
+    }
+}
+@media (max-width:995px) {
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+    .home .home-conteudo h3 {
+        font-size: 2.5rem;
+    }
+    .home-conteudo h1 {
+        font-size: 5rem;
+    }
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+
+/*servicos*/
+.servicos h2 {
+    text-align: center;
+    font-size: 4rem;
+}
+.servicos {
+    background: #161616;
+}
+.servicos-espaco {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+.servicos-caixa {
+    background-color: #7b4bb7;
+    height: 300px;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.servicos-caixa:hover {
+    background: transparent;
+    color: white;
+    transform: scale(1.03);
+    border: 1px solid #7b4bb7;
+}
+.servicos-caixa .servicos-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-height: 200px;
+    justify-content: center;
+    align-items: center;
+    padding: 5em;
+}
+.servicos-info h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+.servicos-info p {
+    font-size: 1.3rem;
+    font-weight: 400;
+    max-height: 100px;
+    margin: auto;
+}
+
+/*habilidades*/
+.habilidades h2 {
+    text-align: center;
+    font-size: 4rem;
+}
+.habilidades {
+    background: black;
+}
+.habilidades .espaco {
+    background: #7c4bb765;
+    color: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 70%;
+    margin: auto;
+    margin-top: 2rem;
+}
+.habilidades .espaco .linha {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-wrap: wrap;
+    gap: 1.8rem;
+}
+.habilidades .espaco .barra {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 1rem;
+    background: black;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.habilidades .espaco .barra:hover {
+        box-shadow: 0 4px 10px #7b4bb7;
+        transform: scale(1.03);
+}
+.habilidades .espaco .barra .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.habilidades .espaco .barra span{
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-left: 0.5rem;
+}
+/* parte do contato*/
+.contato form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+.contato form .caixainput {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contato form .caixainput input,
+.contato form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: white;
+    background: black;
+    border-radius: 0.8rem;
+    border: 2px solid #7b4bb7;
+    margin: 1rem 0;
+    resize: none;
+}
+.contato h2 {
+    text-align: center;
+    font-size: 4rem;
+}
+.contato form .botao {
+margin-top: 2rem;
+}
+
+/*rodape*/
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+    background-color: #7b4bb7;
+}
+.footer .social {
+    text-align: center;
+    padding-bottom: 25px;
+    color: black;
+}
+.footer .social a {
+    font-size: 25px;
+    color: black;
+    border: 2px solid black;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.3s ease;
+}
+.footer .social a:hover {
+    transform: scale(1.2) translateY(-5px);
+    background: black;
+    color: #7b4bb7;
+}
+.footer ul {
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 0;
+    text-align: center;
+}
+.footer ul li a {
+    color: black;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+.footer ul li a:hover {
+    border-bottom: 3px solid black;
+}
+.footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+.footer .copyright {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+}
